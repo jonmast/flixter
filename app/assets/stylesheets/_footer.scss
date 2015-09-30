@@ -1,0 +1,22 @@
+$footer-height: 100px;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: $footer-height + 30px;
+}
+.footer {
+  background-color: rgba(36, 32, 33, .9);
+  color: white;
+  bottom: 0;
+  height: $footer-height;
+  padding: 10px 0px;
+  position: absolute;
+  width: 100%;
+
+  a {
+    color: white;
+  }
+}
