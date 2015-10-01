@@ -16,4 +16,11 @@ feature 'AddCourses', :type => :feature do
     click_button 'Create'
     expect(page).to have_css 'h1', text: 'My course title'
   end
+
+  scenario 'with invalid data' do
+    sign_in_as(FactoryGirl.create(:user))
+    visit new_instructor_course_path
+    expect { click_button 'Create' }.to_not change { Course.count }
+    expect(page).to have_css 'h1', text: 'Add a new course'
+  end
 end
