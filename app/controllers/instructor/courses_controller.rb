@@ -5,7 +5,7 @@ class Instructor::CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(course_params)
+    @course = Course.new(course_params.merge(user: current_user))
     if @course.save
       redirect_to instructor_course_path(@course)
     else

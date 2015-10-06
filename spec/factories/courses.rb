@@ -1,9 +1,7 @@
 FactoryGirl.define do
   factory :course do
-    title "MyString"
-description "MyText"
-cost "9.99"
-user_id nil
+    title 'Super cool course'
+    description "You won't believe how cool this course is!"
+    cost '9.99'
   end
-
 end

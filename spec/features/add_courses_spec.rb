@@ -15,6 +15,7 @@ feature 'AddCourses', :type => :feature do
     fill_in 'Cost', with: 34.82
     click_button 'Create'
     expect(page).to have_css 'h1', text: 'My course title'
+    expect(Course.last.user).to eq user
   end
 
   scenario 'with invalid data' do
