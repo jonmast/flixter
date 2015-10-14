@@ -1,7 +1,6 @@
 FactoryGirl.define do
   factory :section do
-    title "MyString"
-course nil
+    title 'Cool section title'
+    course
   end
-
 end
