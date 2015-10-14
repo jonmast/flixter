@@ -31,4 +31,10 @@ feature "Lessons", :type => :feature do
     visit new_instructor_section_lesson_path(section)
     expect(page).to have_content('Unauthorized')
   end
+
+  scenario 'show lesson' do
+    lesson = FactoryGirl.create(:lesson)
+    visit lesson_path(lesson)
+    expect(page).to have_css(:h1, text: lesson.title)
+  end
 end

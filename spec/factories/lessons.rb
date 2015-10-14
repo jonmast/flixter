@@ -1,9 +1,7 @@
 FactoryGirl.define do
   factory :lesson do
-    title "MyString"
-subtitle "MyString"
-video "MyString"
-section nil
+    title 'Learn something cool'
+    subtitle 'This is unbelievably cool!'
+    section
   end
-
 end
