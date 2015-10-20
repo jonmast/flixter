@@ -7,6 +7,7 @@ gem 'pg'
 gem 'simple_form'
 gem 'devise'
 gem 'carrierwave'
+gem 'mini_magick'
 gem 'fog'
 gem 'figaro'
 
