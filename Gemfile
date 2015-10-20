@@ -6,6 +6,9 @@ gem 'pg'
 
 gem 'simple_form'
 gem 'devise'
+gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
 
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
