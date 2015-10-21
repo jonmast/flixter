@@ -51,3 +51,31 @@ h1, h2, h3, h4, h5, h6, .navbar {
 .img-responsive {
   padding: 20px 0;
 }
+
+.section {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 40px;
+  padding: 20px;
+}
+
+.lesson {
+  background-color: black;
+  margin-top: 10px;
+  min-height: 130px;
+  padding-top: 10px;
+
+  a {
+    color: white;
+    font-size: 15px;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  b {
+    font-size: 25px;
+    font-weight: 100;
+  }
+}
