@@ -1,5 +1,6 @@
 class Course < ActiveRecord::Base
   belongs_to :user
+  has_many :enrollments
   mount_uploader :image, ImageUploader
   has_many :sections, dependent: :destroy
   validates :title, :description, presence: true
