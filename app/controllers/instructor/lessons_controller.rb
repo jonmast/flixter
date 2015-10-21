@@ -19,7 +19,7 @@ class Instructor::LessonsController < ApplicationController
   private
 
   def lesson_params
-    params.require(:lesson).permit(:title, :subtitle)
+    params.require(:lesson).permit(:title, :subtitle, :video)
   end
 
   def authorize_user_for_section
