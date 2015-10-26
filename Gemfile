@@ -10,6 +10,7 @@ gem 'carrierwave'
 gem 'carrierwave-aws'
 gem 'mini_magick'
 gem 'figaro'
+gem 'stripe'
 
 gem 'sass-rails', '~> 5.0'
 gem 'bootstrap-sass'
