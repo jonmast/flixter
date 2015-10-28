@@ -4,10 +4,6 @@ class Instructor::LessonsController < ApplicationController
   before_action :authorize_lesson_admin, only: :update
   helper_method :current_section
 
-  def new
-    @lesson = current_section.lessons.new
-  end
-
   def create
     @lesson = current_section.lessons.new(lesson_params)
     if @lesson.save

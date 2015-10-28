@@ -6,10 +6,11 @@ feature "CourseSections", :type => :feature do
     sign_in_as(course.user)
     visit instructor_course_path(course)
     expect(page).to have_css(:h4, text: 'Add a new section')
-    fill_in 'Title', with: 'Great section title'
+    fill_in :section_title, with: 'Great section title'
     click_button 'Add a section'
-    expect(course.reload.sections.count).to eq 1
+    puts current_path
     expect(page).to have_css(:li, text: 'Great section title')
+    expect(course.reload.sections.count).to eq 1
   end
 
   scenario 'invalid data' do
