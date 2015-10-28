@@ -16,14 +16,28 @@ class Instructor::SectionsController < ApplicationController
     end
   end
 
+  def update
+    current_section.update_attributes(section_params)
+    render text: 'Success'
+  end
+
   private
 
   def section_params
-    params.require(:section).permit(:title)
+    params.require(:section).permit(:title, :row_order_position)
   end
 
   def current_course
-    @current_course ||= Course.find(params[:course_id])
+    @current_course ||=
+      if params[:course_id]
+        Course.find(params[:course_id])
+      else
+        current_section.course
+      end
+  end
+
+  def current_section
+    @current_section ||= Section.find(params[:id])
   end
 
   def authorize_user_for_course
