@@ -3,17 +3,9 @@ class Instructor::SectionsController < ApplicationController
   before_action :authorize_user_for_course
   helper_method :current_course
 
-  def new
-    @section = Section.new(course: current_course)
-  end
-
   def create
-    @section = current_course.sections.new(section_params)
-    if @section.save
-      redirect_to instructor_course_path(current_course)
-    else
-      render :new
-    end
+    @section = current_course.sections.create(section_params)
+    redirect_to instructor_course_path(current_course)
   end
 
   def update
