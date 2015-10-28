@@ -6,6 +6,10 @@ h1, h2, h3, h4, h5, h6, .navbar {
   margin: 0;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .navbar {
   background: image-url('binding_dark.png');
   border-radius: 0;
@@ -57,6 +61,38 @@ h1, h2, h3, h4, h5, h6, .navbar {
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
   margin-top: 40px;
   padding: 20px;
+}
+
+.sections-li {
+  border: 1px solid;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 20px;
+  padding: 20px;
+
+  .header {
+    font-size: 25px;
+
+    .glyphicon {
+      font-size: 20px;
+    }
+  }
+}
+
+.lessons li {
+  background: black;
+  color: white;
+  font-size: 15px;
+  margin-top: 20px;
+  padding: 8px;
+
+  b {
+    font-size: 25px;
+    font-weight: 100;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 .lesson {
