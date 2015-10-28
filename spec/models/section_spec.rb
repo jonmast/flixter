@@ -9,4 +9,12 @@ RSpec.describe Section, :type => :model do
       expect(Section.rank(:row_order).last).to eq old_first
     end
   end
+
+  describe '#next_section' do
+    it 'returns section with next highest position' do
+      course = FactoryGirl.create(:course)
+      sections = FactoryGirl.create_list(:section, 2, course: course)
+      expect(sections[0].next_section).to eq sections[1]
+    end
+  end
 end
